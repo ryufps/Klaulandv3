@@ -1,0 +1,136 @@
+/*========== GOOGLE FONTS ==========*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*==================== VARIABLES CSS ====================*/
+:root {
+  /*========== Colors ==========*/
+  /* Change favorite color */
+  --hue-color: 0;
+  /* HSL color mode */
+  --primary-color: hsl(var(--hue-color), 0%, 61%);
+  --primary-color-second: hsl(var(--hue-color), 0%, 99%);
+  --primary-color-lighter: hsl(var(--hue-color), 0%, 85%);
+  --text-color: hsl(var(--hue-color), 0%, 20%);
+  --text-color-light: hsl(var(--hue-color), 0%, 65%);
+  --body-color: hsl(var(--hue-color), 0%, 99%);
+  --header-height: 3rem;
+}
+
+/*========== Variables Dark theme ==========*/
+body.dark-theme {
+  /* HSL color mode */
+  --primary-color-second: hsl(var(--hue-color), 0%, 10%);
+  --text-color: hsl(var(--hue-color), 0%, 75%);
+  --input-color: hsl(var(--hue-color), 29%, 16%);
+  --body-color: hsl(var(--hue-color), 0%, 5%);
+}
+
+
+/*==================== BASE ====================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.thumbnail {
+    color: var(--text-color);
+    background-color: var(--primary-color-second) !important;    
+}
+
+.caption {
+    color: var(--text-color) !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 0 var(--header-height) 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.94rem;
+  background-color: var(--body-color) !important;
+  color: var(--text-color);
+}
+
+.Titles{
+    color: var(--text-color) !important;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+/*==================== Dark Light Button Implementation ====================*/
+.checkbox {
+  display: none;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  visibility: hidden;
+  position: unset;
+}
+
+.switch {
+  background-color: #111;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: -13px;
+  margin-top: -13px;
+  padding: 5px;
+  margin-left: 20px;
+  position: relative;
+  height: 26px;
+  width: 50px;
+  /* Scale the size to your need */
+  transform: scale(1.5);
+}
+
+.switch .ball {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .switch .ball {
+  transform: translateX(25px);
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f39c12;
+}
