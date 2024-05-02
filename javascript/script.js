@@ -22,3 +22,8 @@ themeButton.addEventListener("change", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   darkThemeSetUp();
 });
+
+function error() {
+  window.alert("Diese Funktion ist leider derzeit nicht verfügbar!");
+}
+
