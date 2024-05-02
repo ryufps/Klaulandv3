@@ -1,0 +1,34 @@
+
+<?php
+
+    $servername = "localhost";
+    $dbname = "klauland";
+    $dbusername = "login";
+    $dbpassword = "test12345678";
+    $con = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
+    if($con-> connect_error) {
+        die("connection failed: " . $con $con-> connect_error);
+        header('Location: login.php' );
+    } else {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $username = preg_replace('/[^A-Za-z0-9\-]/', '', $username);
+        $password = preg_replace('/[^A-Za-z0-9\-]/', '', $password);
+        $sql = "SELECT * FROM 'users' WHERE username LIKE '$username' AND password LIKE '$password'";
+        $result = $con->query($sql);
+    }
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>WORK IN PROGRESSS </h1>
+</body>
+</html>

@@ -1,0 +1,22 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css", rel="stylesheet" href="../css/admin.css">
+    <title>Klauland | Admin-Panel</title>
+</head>
+<body>
+    <div class="login-forms">
+        <h1>Klauland
+             Admin-Panel Login</h1>
+    <form action="admin.php" method="POST">
+        <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+        <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Passwort">
+        <input type="submit" value="Login" id="login-form-submit" class="login-form-button">
+    </form>
+    </div>
+</body>
+</html>
